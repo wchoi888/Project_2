@@ -7,3 +7,4 @@ const Sequelize = new Sequelize('virtual_bookshelf', 'root', 'password', {
 });
 
 module.exports = sequelize;
+
