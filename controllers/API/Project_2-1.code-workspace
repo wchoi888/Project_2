@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "../../Project_2-1"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../db"
+		},
+		{
+			"path": "../../models"
+		},
+		{
+			"path": "../../config"
+		},
+		{
+			"path": "../../public"
+		},
+		{
+			"path": "../../seeds"
+		},
+		{
+			"path": "../../utils"
+		},
+		{
+			"path": "../../views"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {}
+}
