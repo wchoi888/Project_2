@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const booksData = await Book.findByPk(req.param.id, {
+    const booksData = await Book.findByPk(req.params.id, {
       include: [{ model: User }],
     });
 
