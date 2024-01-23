@@ -38,14 +38,15 @@ Virtual Bookshelf is a web application that allows users to discover, search, an
 
    ```bash
    git clone https://github.com/your-username/virtual-bookshelf.git
+
 Navigate to the project directory:
 
-bash
+ ```bash
 Copy code
 cd virtual-bookshelf
 Install dependencies:
 
-bash
+ ```bash
 Copy code
 npm install
 Set up environment variables:
@@ -56,11 +57,11 @@ env
 Copy code
 REACT_APP_BOOKS_API_KEY=your-books-api-key
 REACT_APP_AUTH_API_KEY=your-auth-api-key
-Replace your-books-api-key and your-auth-api-key with your actual API keys.
+// Replace your-books-api-key and your-auth-api-key with your actual API keys.
 
 Start the application:
 
-bash
+ ```bash
 Copy code
 npm start
 The application will be accessible at http://localhost:3000.
