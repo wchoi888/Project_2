@@ -17,6 +17,26 @@
   {{> partials/header}}
 {{{ body }}}
 
+{{> layouts/main}}
+
+<h1>My Bookshelf</h1>
+
+{{#each books}}
+  <div class="book">
+    <h3>{{title}}</h3>
+    <p>Author: {{author}}</p>
+    <!-- Other book details... -->
+
+    {{#if isBookmarked}}
+      <button class="remove-from-bookmark" data-bookid="{{id}}">Remove from Bookmark</button>
+    {{else}}
+      <button class="add-to-bookmark" data-bookid="{{id}}">Add to Bookmark</button>
+    {{/if}}
+  </div>
+{{/each}}
+
+<script src="/models/bookshelf.js"></script>
+
   <!-- Include Bootstrap JS scripts here -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
