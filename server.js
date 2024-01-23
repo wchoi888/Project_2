@@ -1,6 +1,6 @@
 // server.js
 
-// Export modules
+// Import modules
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
@@ -10,31 +10,49 @@ const apiRoutes = require('./routes/api-routes');
 
 require('dotenv').config();
 
+const routes = require("./controllers");
+const helpers = require("./utils/helpers");
+const path = require("path");
+
+const sequelize = require("./config/connection");
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
+const hbs = exphbs.create({ helpers });
 
-// Set up Express to use handlebars as the template engine
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
+const sess = {
+  secret: "Super secret secret",
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
 
-// Middleware for parsing JSON and handling forms
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
+app.use(session(sess));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.use(session({ secret: 'your-secret-key', resave: true, saveUninitialized: true }));
+// Reorder middleware: initialize passport session before routes
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Routes 
+app.use('/api', apiRoutes);
+app.use(routes);
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
 
-// Routes 
-app.use('/api', apiRoutes);
-
 // Syncing our sequelize models and then starting our Express app
-db.sequilize.sync().then(() => {
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
   });
 });
