@@ -44,26 +44,33 @@ Virtual Bookshelf is a web application that allows users to discover, search, an
 
 
 ## Usage
-User Authentication
-Users can sign up or log in to access their Virtual Bookshelf.
-Search for Books
-Use the search functionality to find information about any book in the database.
-Save to Bookshelf
-Save your favorite books to your personal bookshelf for quick access.
-Log Out
-Securely log out to end your session.
-Technologies Used
-React.js
-Node.js
-Express.js
-CSS
-HTML
+- User Authentication
+-- Users can sign up or log in to access their Virtual Bookshelf.
+- Search for Books
+-- Use the search functionality to find information about any book in the database.
+- Save to Bookshelf
+-- Save your favorite books to your personal bookshelf for quick access.
+- Log Out
+-- Securely log out to end your session.
+
+- Technologies Used
+-- React.js
+-- Node.js
+-- Express.js
+-- CSS
+-- HTML
 
 ## APIs Used
-Books API: [Replace with the name and link to the book database API]
-Authentication API: [Replace with the name and link to the authentication API]
-Contributing
-Contributions are welcome! If you have ideas for improvements or find any issues, feel free to open a pull request.
+- Books API: [Replace with the name and link to the book database API]
+- Authentication API: [Replace with the name and link to the authentication API]
+
+## Contributors
+- Bianca Mistretta
+- Wing Choi
+- Gionathan Vargas
+- Kat Lomidze
+
+ 
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
