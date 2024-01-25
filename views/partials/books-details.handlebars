@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ book.title }} - Book Details</title>
+    </head>
+    <body>
+
+        <header>
+            <h1>{{ book.title }}</h1>
+            <p>By {{ book.author }}</p>
+        </header>
+
+        <section>
+            <h2>Details</h2>
+            <ul>
+                <li><strong>Genre:</strong> {{ book.genre }} </li>
+                <li><strong>Published Year:</strong>{{ book.publishedYear }}</li>
+                <li><strong>ISBN:</strong> {{ book.isbn }}</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Description</h2>
+            <p>{{ book.description }}</p>
+        </section>
+         
+         <section>
+           <h2>Reviews</h2>
+           {{#if book.reviews.length}}
+           <ul>
+            {{#each book.reviews}}
+                <li>{{ this }}</li>
+            {{/each}}
+           </ul>
+           {{else}}
+            <p>No reviwes yet</p>
+            {{/if}}
+         </section>
+    </body>
+</html>
