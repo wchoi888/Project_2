@@ -21,6 +21,7 @@ router.get("/:id", async (req, res) => {
 
     res.status(200).json(booksData);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
@@ -34,6 +35,7 @@ router.post("/", async (req, res) => {
 
     res.status(200).json(booksData);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });

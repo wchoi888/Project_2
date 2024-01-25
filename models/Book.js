@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes, INTEGER } = require("sequelize");
 const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
 class Book extends Model {
@@ -29,6 +29,19 @@ Book.init(
       allowNull: false,
     },
     description: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    isBookmarked: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    },
+    publishedYear: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    isbn: {
       type: DataTypes.STRING,
       allowNull: true,
     },

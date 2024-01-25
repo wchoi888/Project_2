@@ -1,11 +1,13 @@
-{{> layouts/main}}
+{{!-- {{> layouts/main}} --}}
 
-<form action="/auth/login" method="POST">
-   <label for="username">Username:</label>
-   <input type="text" id="username" name="username" required>
+{{! <form action="/auth/login" method="POST"> }}
+<form id="login-form">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required />
 
-   <label for="password">Password:</label>
-   <input type="password" id="password" name="password" required>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required />
 
-   <button type="submit">Log In</button>
+  <button type="submit">Log In</button>
 </form>
+<script src="./js/login.js"></script>
