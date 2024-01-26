@@ -28,8 +28,9 @@ const sess = {
   secret: process.env.SESSION_SECRET || "SuperSecretSessionSecret", // Use a secure secret
   cookie: {
     maxAge: 86400000, // 24 hours in milliseconds
-    httpOnly: true,
     secure: process.env.NODE_ENV === "production", // Set to true in production if using HTTPS
+    httpOnly: false,
+    // sameSite: "none",
   },
   resave: false,
   saveUninitialized: true,
