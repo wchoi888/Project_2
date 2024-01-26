@@ -1,4 +1,5 @@
 // Event handler: Handle form submission for user login
+alert("please log in");
 const loginFormHandler = async (event) => {
   // Prevent the default form submission behavior
   event.preventDefault();
