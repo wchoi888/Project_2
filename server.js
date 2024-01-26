@@ -30,7 +30,7 @@ const sess = {
     maxAge: 86400000, // 24 hours in milliseconds
     secure: process.env.NODE_ENV === "production", // Set to true in production if using HTTPS
     httpOnly: false,
-    // sameSite: "none",
+    sameSite: "none",
   },
   resave: false,
   saveUninitialized: true,
