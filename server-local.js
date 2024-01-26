@@ -23,14 +23,14 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
-app.set("trust proxy", 1); // Enable trust proxy to read X-Forwarded-Proto header
+// app.set("trust proxy", 1); // Enable trust proxy to read X-Forwarded-Proto header
 const sess = {
   secret: process.env.SESSION_SECRET || "SuperSecretSessionSecret", // Use a secure secret
   cookie: {
     maxAge: 86400000, // 24 hours in milliseconds
     secure: process.env.NODE_ENV === "production", // Set to true in production if using HTTPS
     httpOnly: false,
-    sameSite: "none",
+    // sameSite: "none",
   },
   resave: false,
   saveUninitialized: true,
