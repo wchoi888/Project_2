@@ -1,8 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Virtual Bookshelf</a>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <!-- Add your navigation links here -->
-    </ul>
+{{#if logged_in}}
+{{> nav}}
+  <div class="bookshelf">
+    {{#each books}}
+      <div class="book">
+        <h3><a href= "/book/{{id}}">{{title}}</a></h3>
+        <p>Author: {{author}}</p>
+        <!-- Other book details... -->
+<button type="button" class="delete-btn" data-bookid="{{id}}">Delete Book</button>
+        {{!-- {{#if isBookmarked}}
+          <button class="remove-from-bookmark" data-bookid="{{id}}">Remove from
+            Bookmark</button>
+        {{else}}
+          <button class="add-to-bookmark" data-bookid="{{id}}">Add to Bookmark</button>
+        {{/if}} --}}
+      </div>
+    {{/each}}
   </div>
-</nav>
+<script src="./js/book.js"></script> 
+{{else}}
+  <a href="/login">You must login first to view this page</a>
+{{/if}}

@@ -1,28 +1,90 @@
-/* Bookshelf container */
-.bookshelf {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+/* Reset some default styles to ensure consistency across browsers */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
-/* Book card styling */
-.book-card {
-  width: 200px; /* Adjust the width as needed */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
   text-align: center;
 }
 
-/* Add some styling to make the cards look like books */
-.book-cover {
-  height: 200px;
-  background-color: #f5f5f5; /* Book cover color */
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 10px;
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
 
-/* Optional: Add a shadow effect */
-.book-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
 }
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.book-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form input,
+.form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.button-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: #0056b3;
+}
+
