@@ -7,6 +7,8 @@ const exphbs = require('express-handlebars');
 const passport = require('./config/passport');
 const db = require('./models');
 const apiRoutes = require('./routes/api-routes');
+const htmlRoutes = require('./routes/html-routes');
+const userRoutes = require('./controllers/authController');
 
 require('dotenv').config();
 
@@ -52,6 +54,8 @@ app.use('/api', require('./routes/api-routes'));
 
 // App Routes
 app.use(routes);
+app.use(htmlRoutes);
+app.use(userRoutes);
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));

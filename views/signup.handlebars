@@ -1,12 +1,15 @@
 {{> layouts/main}}
 
-<form action="/auth/signup" method="POST">
-   <label for="username">Username:</label>
-   <input type="text" id="username" name="username" required>
+<h1>Sign Up</h1>
 
-   <label for="password">Password:</label>
-   <input type="password" id="password" name="password" required>
+<form action="/signup" method="POST">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
 
-   <button type="submit">Sign Up</button>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
 
+  <button type="submit">Sign Up</button>
 </form>
+
+<p>Already have an account? <a href="/login">Log in here</a>.</p>
