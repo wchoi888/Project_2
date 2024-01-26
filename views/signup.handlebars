@@ -1,8 +1,8 @@
-{{> layouts/main}}
-<link rel="stylesheet" type="text/css" href="/public/css/style.css">
+{{> nav}}
 
 <h1>Sign Up</h1>
-<form action="/signup" method="POST">
+{{!-- <form action="/signup" method="POST"> --}}
+<form id="signup">
   <label for="username">Username:</label>
   <input type="text" id="username" name="username" required>
 
@@ -12,4 +12,5 @@
   <button type="submit">Sign Up</button>
 </form>
 
-<p>Already have an account? <a href="/login">Log in here</a>.</p>
+<p>Already have an account? <a href="/login">Log in here</a></p>
+<script src="/js/signup.js"></script>

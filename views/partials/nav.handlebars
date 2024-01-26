@@ -1,8 +1,13 @@
-<link rel="stylesheet" type="text/css" href="/public/css/style.css">
+{{! <link rel="stylesheet" type="text/css" href="/public/css/style.css"> }}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Virtual Bookshelf</a>
-  <a class="navbar-brand" href="/addbooks">Add Books</a>
-  <a class="navbar-brand" href="/" id="logout">Logout</a>
+  {{#if logged_in}}
+    <a class="navbar-brand" href="/">Virtual Bookshelf</a>
+    <a class="navbar-brand" href="/addbooks">Add Books</a>
+    <a class="navbar-brand" href="/" id="logout">Logout</a>
+  {{else}}
+    <a class="navbar-brand" href="/signup">Sign Up</a>
+    <a class="navbar-brand" href="/login" id="login">login</a>
+  {{/if}}
   {{! <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <!-- Add your navigation links here -->

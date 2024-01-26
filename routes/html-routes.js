@@ -1,11 +1,9 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 // Render signup form
-router.get('/signup', (req, res) => {
-    res.render('signup');
+router.get("/signup", (req, res) => {
+  res.render("signup");
 });
 
 module.exports = router;
-//=======
-

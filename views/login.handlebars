@@ -1,7 +1,8 @@
 {{!-- {{> layouts/main}} --}}
-
+{{> nav}}
+<h1>Login</h1>
 {{! <form action="/auth/login" method="POST"> }}
-<link rel="stylesheet" type="text/css" href="/public/css/style.css">
+{{! <link rel="stylesheet" type="text/css" href="/public/css/style.css" /> }}
 <form id="login-form">
   <label for="username">Username:</label>
   <input type="text" id="username" name="username" required />
@@ -11,4 +12,4 @@
 
   <button type="submit">Log In</button>
 </form>
-<script src="./js/login.js"></script>
+<script src="/js/login.js"></script>
