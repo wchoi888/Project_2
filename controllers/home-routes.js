@@ -6,6 +6,9 @@ router.get("/", withAuth, async (req, res) => {
   try {
     const booksData = await Book.findAll({
       include: [{ model: User }],
+      where: {
+        user_id: req.session.user_id,
+      },
     });
     const books = booksData.map((bookExtract) =>
       bookExtract.get({ plain: true })
@@ -14,6 +17,7 @@ router.get("/", withAuth, async (req, res) => {
       books,
       logged_in: req.session.logged_in,
       user_id: req.session.user_id,
+      username: req.session.username,
     });
   } catch (err) {
     console.log(err);
@@ -22,7 +26,11 @@ router.get("/", withAuth, async (req, res) => {
 });
 router.get("/book/:id", withAuth, async (req, res) => {
   try {
-    const booksData = await Book.findByPk(req.params.id, {
+    const booksData = await Book.findOne({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
       include: [{ model: User }],
     });
     const book = booksData.get({ plain: true });
@@ -30,9 +38,9 @@ router.get("/book/:id", withAuth, async (req, res) => {
       book,
       logged_in: req.session.logged_in,
       user_id: req.session.user_id,
+      username: req.session.username,
     });
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -40,6 +48,7 @@ router.get("/addbooks", withAuth, (req, res) => {
   res.render("books-form", {
     logged_in: req.session.logged_in,
     user_id: req.session.user_id,
+    username: req.session.username,
   });
 });
 router.get("/login", (req, res) => {
@@ -48,5 +57,12 @@ router.get("/login", (req, res) => {
     return;
   }
   res.render("login");
+});
+router.get("/signup", (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("/");
+    return;
+  }
+  res.render("signup");
 });
 module.exports = router;

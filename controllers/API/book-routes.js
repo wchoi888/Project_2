@@ -5,6 +5,9 @@ router.get("/", async (req, res) => {
   try {
     const booksData = await Book.findAll({
       include: [{ model: User }],
+      where: {
+        user_id: req.session.user_id,
+      },
     });
 
     res.status(200).json(booksData);
@@ -15,7 +18,11 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const booksData = await Book.findByPk(req.params.id, {
+    const booksData = await Book.findOne({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
       include: [{ model: User }],
     });
 
@@ -45,6 +52,7 @@ router.put("/:id", async (req, res) => {
     const booksData = await Book.update(req.body, {
       where: {
         id: req.params.id,
+        user_id: req.session.user_id,
       },
     });
 
@@ -64,6 +72,7 @@ router.delete("/:id", async (req, res) => {
     const booksData = await Book.destroy({
       where: {
         id: req.params.id,
+        user_id: req.session.user_id,
       },
     });
 

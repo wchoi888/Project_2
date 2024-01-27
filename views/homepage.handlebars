@@ -1,6 +1,6 @@
 {{#if logged_in}}
 {{> nav}}
-<link rel="stylesheet" type="text/css" href="/public/css/style.css">
+{{!-- <link rel="stylesheet" type="text/css" href="/public/css/style.css"> --}}
   <div class="bookshelf">
     {{#each books}}
       <div class="book">
@@ -17,7 +17,7 @@
       </div>
     {{/each}}
   </div>
-<script src="./js/book.js"></script> 
+<script src="/js/book.js"></script> 
 {{else}}
   <a href="/login">You must login first to view this page</a>
 {{/if}}
