@@ -1,27 +1,29 @@
 {{#if logged_in}}
 {{> nav}}
 <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+<div class="book-form">
 <form id="addbooks-form">
-  <label for="title">title:</label>
+  <label for="title">Title:</label>
   <input type="text" id="title" name="title" required />
 
-  <label for="author">author:</label>
+  <label for="author">Author:</label>
   <input type="text" id="author" name="author" required />
 
-  <label for="genre">genre:</label>
+  <label for="genre">Genre:</label>
   <input type="text" id="genre" name="genre" required />
 
-  <label for="description">description:</label>
+  <label for="description">Description:</label>
   <textarea name="description" id="description"> </textarea>
 
-  <label for="publishedYear">published year:</label>
+  <label for="publishedYear">Published Year:</label>
   <input type="text" id="publishedYear" name="publishedYear" />
 
-  <label for="isbn">isbn:</label>
+  <label for="isbn">ISBN:</label>
   <input type="text" id="isbn" name="isbn" />
 
   <button type="submit" id="submit-btn">Add Book</button>
 </form>
+</div>
 <script src="/js/book.js"></script>
 {{else}}
   <a href="/login">You must login first to view this page</a>

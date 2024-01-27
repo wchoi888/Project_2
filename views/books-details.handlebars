@@ -1,12 +1,12 @@
 {{#if logged_in}}
-{{> nav}}
+{{!-- {{> nav}} --}}
 {{!-- <link rel="stylesheet" type="text/css" href="/public/css/style.css"> --}}
 <div>
-  <h1>{{book.title}}</h1>
-  <p>By {{book.author}}</p>
+  <h1 class="bd-title">{{book.title}}</h1>
+  <p class="bd-author">By {{book.author}}</p>
 </div>
 
-<section>
+<section class="bd-container">
   <h2>Details</h2>
   <ul>
     <li><strong>Genre:</strong> {{book.genre}} </li>
@@ -15,9 +15,9 @@
   </ul>
 </section>
 
-<section>
+<section class="description-container">
   <h2>Description</h2>
-  <p>{{book.description}}</p>
+  <p class="bd-description">{{book.description}}</p>
 </section>
 
 {{!-- <script src="./js/logout.js"></script> --}}
