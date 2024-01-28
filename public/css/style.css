@@ -17,6 +17,7 @@ body {
   line-height: 2.5;
   background-color: #abaa82;
   color: #792424;
+  
 }
 
 .container {
@@ -87,6 +88,7 @@ h3:hover{
   text-transform: capitalize;
   text-align: center;
   padding: 40px;
+  font-weight: bold;
 }
 
 .bd-author{
@@ -162,4 +164,16 @@ nav.navbar{
 input[type="text"],
 textarea { 
   padding: 10px;
+}
+
+.bd-description{
+  font-size: 20px;
+}
+
+.bd-details{
+  font-size: 20px;
+}
+
+.bd-caption{
+  border: 1px solid white ;
 }
