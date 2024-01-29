@@ -51,6 +51,7 @@ Virtual Bookshelf is a web application that allows users to create a list of boo
 -- Node.js
 -- Express.js
 -- CSS
+-- Bootstrap
 -- HTML
 -- dotenv-safe (new technology)
 
