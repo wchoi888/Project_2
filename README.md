@@ -6,7 +6,6 @@ Virtual Bookshelf is a web application that allows users to discover, search, an
 
 - [Features](#features)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
   - [User Authentication](#user-authentication)
@@ -25,11 +24,6 @@ Virtual Bookshelf is a web application that allows users to discover, search, an
 - Log out feature to secure user sessions.
 
 ## Getting Started
-
-### Prerequisites
-
-- Node.js installed on your machine.
-- API keys for the book database (replace placeholders in the code with actual API keys).
 
 ### Installation
 1. Clone the repository:
