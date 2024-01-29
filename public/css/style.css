@@ -13,11 +13,10 @@ li {
 body {
   height: 100%;
   margin: 0;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   line-height: 2.5;
   background-color: #abaa82;
   color: #792424;
-  
 }
 
 .container {
@@ -32,6 +31,9 @@ header {
   padding: 20px;
   text-align: center;
 }
+header h2 {
+  color: #007bff;
+}
 /*
 .navbar {
   background-color: #333;
@@ -40,11 +42,11 @@ header {
   text-align: center;
 }*/
 
-/*.navbar a {
-  color: #fff;
+.navbar a {
+  color: #e0c8c8;
   text-decoration: none;
-  margin: 0 15px;
-}*/
+  /* margin: 0 15px; */
+}
 
 .book-list {
   display: grid;
@@ -80,27 +82,27 @@ header {
   font-size: 16px;
 }
 
-h3:hover{
+h3:hover {
   background-color: #8b8a65;
 }
 
-.bd-title{
+.bd-title {
   text-transform: capitalize;
   text-align: center;
   padding: 40px;
   font-weight: bold;
 }
 
-.bd-author{
+.bd-author {
   text-transform: capitalize;
   text-align: center;
-  font-size: 20px ;
+  font-size: 20px;
   font-weight: bold;
   background-color: #651616;
   color: #abaa82;
 }
 
-.bd-container{
+.bd-container {
   text-align: center;
   padding: 50px;
   line-height: 2.8;
@@ -109,11 +111,11 @@ h3:hover{
   margin-bottom: 20px;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
-.description-container{
+.description-container {
   padding: 70px;
   text-align: center;
   border: 2px solid black;
@@ -121,59 +123,59 @@ ul{
   margin-bottom: 20px;
 }
 
-.login-container{
+.login-container {
   text-align: center;
   padding: 80px;
 }
 
-.book{
+.book {
   padding: 40px;
   border: 2px solid black;
   margin: 20px;
-  
 }
 
-button{
+button {
   background-color: #792424;
-  color:#ddd;
+  color: #ddd;
   border-radius: 10px;
   position: relative;
   margin-left: 900px;
 }
 
-nav.navbar{
+nav.navbar {
   background-color: #651616;
   border-radius: 5px;
 }
 
-#addbooks-form{
+#addbooks-form {
   display: grid;
   gap: 15px;
   text-align: center;
   font-size: 20px;
 }
 
-.book-form{
-  margin-top:30px;
+.book-form {
+  margin-top: 30px;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   font-weight: bold;
 }
 
-input[type="text"],
-textarea { 
+/* input[type="password"],
+input[type="text"], */
+textarea {
   padding: 10px;
 }
 
-.bd-description{
+.bd-description {
   font-size: 20px;
 }
 
-.bd-details{
+.bd-details {
   font-size: 20px;
 }
 
-.bd-caption{
-  border: 1px solid white ;
+.bd-caption {
+  border: 1px solid white;
 }

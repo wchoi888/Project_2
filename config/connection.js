@@ -1,4 +1,6 @@
-require("dotenv-safe").config();
+require("dotenv-safe").config({
+  example: ".env",
+});
 const Sequelize = require("sequelize");
 
 const sequelize = process.env.JAWSDB_URL
@@ -18,4 +20,3 @@ const sequelize = process.env.JAWSDB_URL
     );
 
 module.exports = sequelize;
-

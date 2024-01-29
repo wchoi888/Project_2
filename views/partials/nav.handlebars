@@ -1,12 +1,12 @@
 
 <nav class="navbar {{!--navbar-expand-lg--}} navbar-light {{!--bg-light--}}">
   {{#if logged_in}}
-    <a class="navbar-brand" href="/">Virtual Bookshelf</a>
-    <a class="navbar-brand" href="/addbooks">Add Books</a>
-    <a class="navbar-brand" href="/" id="logout">Log Out</a>
+    <a href="/">Virtual Bookshelf</a>
+    <a href="/addbooks">Add Books</a>
+    <a href="/" id="logout">Log Out</a>
   {{else}}
-    <a class="navbar-brand" href="/signup">Sign Up</a>
-    <a class="navbar-brand" href="/login" id="login">Log In</a>
+    <a href="/signup">Sign Up</a>
+    <a href="/login" id="login">Log In</a>
   {{/if}}
   {{! <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
