@@ -60,10 +60,6 @@ Virtual Bookshelf is a web application that allows users to discover, search, an
 -- CSS
 -- HTML
 
-## APIs Used
-- Books API: [Replace with the name and link to the book database API]
-- Authentication API: [Replace with the name and link to the authentication API]
-
 ## Contributors
 - Bianca Mistretta
 - Wing Choi
@@ -75,6 +71,8 @@ Virtual Bookshelf is a web application that allows users to discover, search, an
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Link to site:
+## Link to site: https://young-lake-53776-5ca5885c8205.herokuapp.com/
 
-## Screenshot:
+## Screenshot:<img width="963" alt="Screenshot 2024-01-29 at 4 21 12 PM" src="https://github.com/wchoi888/Project_2/assets/142269375/3bdc09c8-1f3e-4baf-8d15-45126a6536f4">
+
+
