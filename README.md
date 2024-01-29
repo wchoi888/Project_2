@@ -53,7 +53,7 @@ Virtual Bookshelf is a web application that allows users to discover, search, an
 -- Securely log out to end your session.
 
 - Technologies Used
--- React.js
+
 -- Node.js
 -- Express.js
 -- CSS
