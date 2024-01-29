@@ -1,6 +1,6 @@
 # Virtual Bookshelf
 
-Virtual Bookshelf is a web application that allows users to create a list of books by adding it to their virtual bookshelf as well as read book details/descriptions.
+Virtual Bookshelf is a web application that allows users to create a list of books by adding them to their virtual bookshelf as well as read book details/descriptions.
 
 ## Table of Contents
 
@@ -52,6 +52,7 @@ Virtual Bookshelf is a web application that allows users to create a list of boo
 -- Express.js
 -- CSS
 -- HTML
+-- dotenv-safe (new technology)
 
 ## Contributors
 - Bianca Mistretta
@@ -68,4 +69,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Screenshot:<img width="963" alt="Screenshot 2024-01-29 at 4 21 12 PM" src="https://github.com/wchoi888/Project_2/assets/142269375/3bdc09c8-1f3e-4baf-8d15-45126a6536f4">
 
+## Link to repo: https://github.com/wchoi888/virtual_bookshelf
 
