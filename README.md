@@ -1,6 +1,6 @@
 # Virtual Bookshelf
 
-Virtual Bookshelf is a web application that allows users to discover, search, and save books to their bookshelf. It utilizes APIs to pull data about books from a database, providing users with a convenient way to manage their reading lists.
+Virtual Bookshelf is a web application that allows users to discover, search, and save books to their bookshelf, providing users with a convenient way to manage their reading lists.
 
 ## Table of Contents
 
