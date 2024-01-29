@@ -14,7 +14,6 @@ Virtual Bookshelf is a web application that allows users to discover, search, an
   - [Save to Bookshelf](#save-to-bookshelf)
   - [Log Out](#log-out)
 - [Technologies Used](#technologies-used)
-- [APIs Used](#apis-used)
 - [Contributing](#contributing)
 - [License](#license)
 
