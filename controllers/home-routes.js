@@ -1,9 +1,11 @@
+// Router and Model Imports:
 const router = require("express").Router();
 const { User, Book } = require("../models");
 const withAuth = require("../utils/auth");
-
+//Protected Routes (with Authentication Middleware):
 router.get("/", withAuth, async (req, res) => {
   try {
+    //Homepage Route:
     const booksData = await Book.findAll({
       include: [{ model: User }],
       where: {
@@ -26,6 +28,7 @@ router.get("/", withAuth, async (req, res) => {
 });
 router.get("/book/:id", withAuth, async (req, res) => {
   try {
+    //Book Details Route:
     const booksData = await Book.findOne({
       where: {
         id: req.params.id,
@@ -45,12 +48,14 @@ router.get("/book/:id", withAuth, async (req, res) => {
   }
 });
 router.get("/addbooks", withAuth, (req, res) => {
+  //Add Books Route:
   res.render("books-form", {
     logged_in: req.session.logged_in,
     user_id: req.session.user_id,
     username: req.session.username,
   });
 });
+//Login and Signup Routes:
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");

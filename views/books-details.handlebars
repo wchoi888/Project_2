@@ -1,26 +1,27 @@
 {{#if logged_in}}
-{{!-- {{> nav}} --}}
-{{!-- <link rel="stylesheet" type="text/css" href="/public/css/style.css"> --}}
-<div>
-  <h1 class="bd-title">{{book.title}}</h1>
-  <p class="bd-author">By {{book.author}}</p>
-</div>
+  <!-- Display book details if the user is logged in -->
 
-<section class="bd-container">
-  <h2 class="bd-caption">Details</h2>
-  <ul class="bd-details">
-    <li><strong>Genre:</strong> {{book.genre}} </li>
-    <li><strong>Published Year:</strong>{{book.publishedYear}}</li>
-    <li><strong>ISBN:</strong> {{book.isbn}}</li>
-  </ul>
-</section>
+  <!-- Book title and author information -->
 
-<section class="description-container">
-  <h2 class="bd-caption">Description</h2>
-  <p class="bd-description">{{book.description}}</p>
-</section>
+  <div>
+    <h1 class="bd-title">{{book.title}}</h1>
+    <p class="bd-author">By {{book.author}}</p>
+  </div>
+  <!-- Book details section -->
+  <section class="bd-container">
+    <h2 class="bd-caption">Details</h2>
+    <ul class="bd-details">
+      <li><strong>Genre:</strong> {{book.genre}} </li>
+      <li><strong>Published Year:</strong>{{book.publishedYear}}</li>
+      <li><strong>ISBN:</strong> {{book.isbn}}</li>
+    </ul>
+  </section>
+  <!-- Book description section -->
+  <section class="description-container">
+    <h2 class="bd-caption">Description</h2>
+    <p class="bd-description">{{book.description}}</p>
+  </section>
 
-{{!-- <script src="./js/logout.js"></script> --}}
 {{else}}
   <a href="/login">You must login first to view this page</a>
 {{/if}}

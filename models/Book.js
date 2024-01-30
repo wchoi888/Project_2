@@ -1,11 +1,14 @@
+//Imports:
 const { Model, DataTypes, INTEGER } = require("sequelize");
 const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
+//Book Model:
 class Book extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
+//Model Initialization:
 Book.init(
   {
     id: {

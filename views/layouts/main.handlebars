@@ -20,27 +20,10 @@
     {{! <h1>My Bookshelf</h1> }}
 
     <div class="container mt-4">
+      <!-- Dynamic content injected by the server (e.g., using a templating engine) -->
       {{{body}}}
     </div>
-    {{!-- {{> partials/header}} --}}
-    {{!-- {{{body}}} --}}
-
-    {{!-- {{> layouts/main}} --}}
-
-    {{!-- {{#each books}}
-      <div class="book">
-        <h3>{{title}}</h3>
-        <p>Author: {{author}}</p>
-        <!-- Other book details... -->
-
-        {{#if isBookmarked}}
-          <button class="remove-from-bookmark" data-bookid="{{id}}">Remove from
-            Bookmark</button>
-        {{else}}
-          <button class="add-to-bookmark" data-bookid="{{id}}">Add to Bookmark</button>
-        {{/if}}
-      </div>
-    {{/each}} --}}
+    <!-- Conditional rendering based on the user being logged in -->
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
       {{! <script src="./js/bookshelf.js"></script> }}

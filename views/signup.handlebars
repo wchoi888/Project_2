@@ -1,15 +1,19 @@
 {{> nav}}
-
+<!-- Including a navigation partial -->
 <h1>Sign Up</h1>
 {{!-- <form action="/signup" method="POST"> --}}
 <form id="signup">
+  <!-- User registration form with a unique identifier for scripting purposes -->
   <label for="username">Username:</label>
   <input type="text" id="username" name="username" required>
+  <!-- Text input for entering the desired username, with 'required' attribute for form validation -->
 
   <label for="password">Password:</label>
   <input type="password" id="password" name="password" required>
+  <!-- Password input for entering the desired password, with 'required' attribute for form validation -->
 
   <button type="submit">Sign Up</button>
+  <!-- Submit button to trigger the user registration action -->
 </form>
 
 <p>Already have an account? <a href="/login">Log in here</a></p>

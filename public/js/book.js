@@ -1,3 +1,4 @@
+// Function to handle the form submission for adding books
 const addbooksformhandler = async (event) => {
   event.preventDefault();
   // Get input values from the form
@@ -7,9 +8,8 @@ const addbooksformhandler = async (event) => {
   const description = document.querySelector("#description").value.trim();
   const publishedYear = document.querySelector("#publishedYear").value.trim();
   const isbn = document.querySelector("#isbn").value.trim();
-  // Check if both title and content are provided
+  //Check if all required fields are provided
   if (author && title && genre && description && publishedYear && isbn) {
-    // Send a POST request to create a new blogpost
     const response = await fetch("/API/book", {
       method: "POST",
       body: JSON.stringify({
@@ -22,7 +22,7 @@ const addbooksformhandler = async (event) => {
       }),
       headers: { "Content-Type": "application/json" },
     });
-    // Redirect to the dashboard if the request is successful, otherwise log the error
+
     if (response.ok) {
       document.location.replace("/");
     } else {
@@ -31,19 +31,18 @@ const addbooksformhandler = async (event) => {
     }
   }
 };
-
-// Event handler: Handle form submission for deleting an existing blogpost
+// Function to handle the form submission for deleting an existing book
 const deleteFormHandler = async (event) => {
   event.preventDefault();
   // Get the blogpost ID from the form
   const bookId = event.target.dataset.bookid;
-  // Check if the blogpost ID is provided
+  //// Check if the book ID is provided
   if (bookId) {
     const response = await fetch(`/API/book/${bookId}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
     });
-    // Redirect to the dashboard if the request is successful, otherwise log the error
+
     if (response.ok) {
       document.location.replace("/");
     } else {

@@ -1,15 +1,18 @@
-{{!-- {{> layouts/main}} --}}
+<!-- Including a navigation partial-->
 {{> nav}}
 <section class="login-container">
+  <!-- Section containing the login form -->
 <h1>Login</h1>
-{{! <form action="/auth/login" method="POST"> }}
-{{! <link rel="stylesheet" type="text/css" href="/public/css/style.css" /> }}
+
 <form id="login-form">
+  <!-- Login form with a unique identifier for scripting purposes -->
   <label for="username">Username:</label>
   <input type="text" id="username" name="username" required />
+   <!-- Text input for entering the username, with 'required' attribute for form validation -->
 
   <label for="password">Password:</label>
   <input type="password" id="password" name="password" required />
+  <!-- Password input for entering the password, with 'required' attribute for form validation -->
 
   <button type="submit">Log In</button>
 </form>

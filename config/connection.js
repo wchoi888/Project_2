@@ -1,8 +1,10 @@
+//Loading Environment Variables:
 require("dotenv-safe").config({
   example: ".env",
 });
+// Importing Sequelize:
 const Sequelize = require("sequelize");
-
+//Creating a Sequelize Instance:
 const sequelize = process.env.JAWSDB_URL
   ? new Sequelize(process.env.JAWSDB_URL)
   : new Sequelize(

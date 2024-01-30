@@ -1,6 +1,8 @@
 {{#if logged_in}}
+<!-- Include navigation component -->
 {{> nav}}
 <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+<!-- Book addition form section -->
 <div class="book-form">
 <form id="addbooks-form">
   <label for="title">Title:</label>
@@ -24,6 +26,7 @@
   <button type="submit" id="submit-btn">Add Book</button>
 </form>
 </div>
+<!-- Include script for handling book-related functionality -->
 <script src="/js/book.js"></script>
 {{else}}
   <a href="/login">You must login first to view this page</a>
